@@ -25,6 +25,7 @@ CREATE TABLE players (
 
 CREATE TABLE player_skill (
     "sofifa_id" int PRIMARY KEY NOT NULL,
+    "long_name" varchar,
     "international_reputation" int   NOT NULL,
     "weak_foot" int   NOT NULL,
     "skill_moves" int   NOT NULL,
@@ -103,8 +104,9 @@ CREATE TABLE league (
 );
 
 CREATE TABLE player_perf (
-    "sofifa_id" int PRIMARY KEY NOT NULL,
-    "ptime_min_played" int,
+    "long_name" varchar PRIMARY KEY NOT NULL,
+    "sofifa_id" int,
+    "ptime_matches_played" int,
     "ptime_starts" int,
     "ptime_min" int,
     "perf_goals" int,
@@ -127,5 +129,4 @@ CREATE TABLE player_perf (
     "per_90_exp_np_exp_goals" int,
     "per_90_exp_np_exp_goals_assists" int
 );
-
 
